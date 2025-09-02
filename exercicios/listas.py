@@ -74,3 +74,22 @@ notas_aluno2.append(nota3_aluno2)
 soma_aluno2 = nota1_aluno2 + nota2_aluno2 + nota3_aluno2
 media_aluno2 = (soma_aluno2 / 3)
 print(f"As notas do segundo aluno foram {notas_aluno2}.\nA média desse aluno ficou: {media_aluno2:.2f}.")
+
+
+#11. Questão tabuleiro usando list comprehension. (Questão resolvida em sala)
+
+lista_peoes= ["pea"]*8
+lista_pecas = ["tor", "cav", "bis", "rai", "rei", "bis", "cav", "tor"] 
+tabuleiro = [["[ ]" for casa in range(8)] for linha in range(8)]
+tabuleiro[0] = lista_pecas.copy()
+tabuleiro[1] = lista_peoes.copy()
+tabuleiro[-1] = lista_pecas[::-1]
+tabuleiro[-2] = lista_peoes.copy()
+
+tabuleiro[2][4] = tabuleiro [1][4]
+tabuleiro[1][4]= "[ ]"
+
+for linha in tabuleiro:
+    print(linha)
+
+
