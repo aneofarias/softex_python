@@ -103,4 +103,15 @@ elif opcao == 3:
 elif opcao == 4: 
      print(f"A divisão dos números digitados é: {div}")
 
-     
+#9. Crie uma função chamada aplicar_operacao que receba dois números e uma função como parâmetros. A função deve aplicar a operação recebida (ex: soma, multiplicação). Exemplo:
+
+a = int(input("Digite um número: "))
+b = int(input("Digite outro número: "))
+
+def soma(a, b): 
+    return a + b
+
+def aplicar_operacao(a, b, soma):
+    return soma(a, b)
+
+print(f"Resultado da operação de soma: {aplicar_operacao(a, b, soma)}.")     
