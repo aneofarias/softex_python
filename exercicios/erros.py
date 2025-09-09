@@ -97,3 +97,5 @@ except IdadeInvalidaError:
 
 except ValueError:
     print(f"Erro! A idade digitada é inválido.")
+
+    
