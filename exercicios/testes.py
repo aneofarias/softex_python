@@ -1,4 +1,3 @@
-#7. Peça ao usuário dois números e divida o primeiro pelo segundo. Trate dois tipos de erro:
 
 
 class ContaBancaria:
