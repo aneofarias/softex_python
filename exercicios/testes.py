@@ -1,24 +1,42 @@
-#9. Crie uma função chamada aplicar_operacao que receba dois números e uma função como parâmetros. A função deve aplicar a operação recebida (ex: soma, multiplicação). Exemplo:
+#7. Peça ao usuário dois números e divida o primeiro pelo segundo. Trate dois tipos de erro:
 
-a = int(input("Digite um número: "))
-b = int(input("Digite outro número: "))
 
-def soma(a, b): 
-    return a + b
+class ContaBancaria:
+    def __init__(self, conta, titular, saldo):
+        self.titular = titular
+        self.conta = conta
+        self.saldo = saldo
+        self.operacoes = []
+    
+    # def depositar(self, novo_saldo):
+    #     self.saldo = novo_saldo            
 
-def sub(a, b):
-     return a - b
+    # def sacar(self, novo_saldo):
+    #     self.saldo = novo_saldo    
 
-def mult(a, b):
-     return a * b
+    def __str__ (self):
+        return(f"Conta nº {b.conta!r} do titular {b.titular!r} possui {b.saldo!r} de saldo.")
+        
+    def deposito(self, valor):
+        self.saldo += valor
+        self.operacoes.append(f"Deposito", {valor})
+        return (f"Foi depositado um valor de R${valor} em sua conta.")
 
-def div(a, b):
-     return a / b
+    def saque(self, valor):
+        self.saldo -= valor
+        self.operacoes.append(f"Saque", {valor})
+        return (f"Foi sacado um valor de R${valor} da sua conta.")
 
-def aplicar_operacao(a, b, operacao):
-    return operacao(a, b)
+    def extrato(self, consulta):
 
-print(f"Resultado da operação de soma: {aplicar_operacao(a, b, soma)}.")    
-print(f"Resultado da operação de subtração: {aplicar_operacao(a, b, sub)}.")    
-print(f"Resultado da operação de multiplicação: {aplicar_operacao(a, b, mult)}.") 
-print(f"Resultado da operação de divisão: {aplicar_operacao(a, b, div)}.")       
+
+#adicionar horário, data no append
+
+b = ContaBancaria("Ane", 312443, -99)        
+print(b)
+
+b.deposito(100)
+print(b)
+
+b.saque(1)
+print(b)

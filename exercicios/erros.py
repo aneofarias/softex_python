@@ -98,4 +98,54 @@ except IdadeInvalidaError:
 except ValueError:
     print(f"Erro! A idade digitada é inválido.")
 
-    
+#7. Peça ao usuário dois números e divida o primeiro pelo segundo. Trate dois tipos de erro:
+
+num1 = input("Digite um número: ")
+num2 = input("Digite outro número: ")
+
+try:
+    num1 = int(num1)
+    num2 = int(num2)
+    div = num1 / num2
+    print(f"O resultado da divisão dos números informados é: {div}.")
+
+except ValueError:
+    print(f"{num1} ou {num2} não é um número")
+
+except ZeroDivisionError:
+    print(f"Erro! Digite um número diferente de 0.")        
+
+#8. # Crie um programa que peça ao usuário um número inteiro e verifique se ele é par. Use:
+
+num = input("Digite um número inteiro: ")
+
+try:
+    num = int(num)
+    if num % 2 == 0:
+        print(f"O número {num} é par.")
+    else:
+        print(f"O número {num} é ímpar.")    
+
+finally:
+    print("Fim do programa.")            
+
+#9. Crie uma função sacar(saldo, valor) que:
+
+# Lance (raise) uma exceção personalizada SaldoInsuficienteError se o valor for maior que o saldo.
+
+# Caso contrário, retorne o novo saldo. Teste a função dentro de um try-except e exiba uma mensagem apropriada ao usuário.    
+
+class SaldoInsuficienteError(Exception):
+    pass
+
+def sacar(saldo, valor):
+    if valor > saldo:
+        raise SaldoInsuficienteError("O valor solicitado é maior que o saldo.")
+    else:
+        saldo = saldo - valor
+        print(f"Foi efetuado um saque de: R${valor} e o novo saldo da sua conta é: R${saldo}.")
+
+try:
+    sacar(300, 1000)
+except SaldoInsuficienteError as erro: 
+    print(erro)

@@ -40,7 +40,7 @@ class Carro:
 
 
 c1 = Carro("Volkswagen", "T-Cross", 2025)       
-c2 = Carro("Fiat", "Uno", 200)
+c2 = Carro("Fiat", "Uno", 2000)
 c3 = Carro("Honda", "Civic", 2019)
 
 c1.apresentacao()
